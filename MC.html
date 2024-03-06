@@ -33,7 +33,7 @@
         <input type="text" id="favoriteColor" name="favoriteColor" required>
         <br>
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="0" max="100" required>
+        <input type="number" id="age" name="age" min="18" max="100" required>
         <br>
         <label for="favoriteMusicGenre">Favorite Music Genre:</label>
         <input type="text" id="favoriteMusicGenre" name="favoriteMusicGenre">
@@ -58,10 +58,10 @@
 
             // Check if consent is given
             if (document.getElementById('consent').checked) {
-                // Send the user's information to you (replace 'your-email@example.com' with your email address)
+                // Send the user's information to your email (replace 'moluverse@gmail.com' with your email address)
                 var message = 'Name: ' + name + '\nFavorite Color: ' + favoriteColor + '\nAge: ' + age + '\nFavorite Music Genre: ' + favoriteMusicGenre + '\nInterests: ' + interests;
                 var subject = 'User Information';
-                var mailtoLink = 'mailto:your-email@example.com' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+                var mailtoLink = 'mailto:moluverse@gmail.com' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
                 window.location.href = mailtoLink;
 
                 // Optionally, you can show a confirmation message to the user
