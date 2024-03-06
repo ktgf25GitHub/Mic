@@ -15,8 +15,6 @@
             /* Change the background color to black */
             color: rgb(33, 115, 223);
             /* Change the text color to white */
-            font-size: 1.1em;
-            /* Increase the font size slightly */
         }
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,8 +22,8 @@
 </head>
 
 <body>
-    <h1>Micah's Site | Signing Page</h1>
-    <p>Please enter your information below to submit:</p>
+    <h1>Micah's Site | Yr6 R.E</h1>
+    <p>Please enter your information below:</p>
 
     <form id="promptForm">
         <label for="name">Name:</label>
@@ -37,8 +35,8 @@
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" min="0" max="100" required>
         <br>
-        <label for="Favourte Music Genre">Desired Job:</label>
-        <input type="text" id="Favourte Music Genre" name="Favourte Music Genre">
+        <label for="favoriteMusicGenre">Favorite Music Genre:</label>
+        <input type="text" id="favoriteMusicGenre" name="favoriteMusicGenre">
         <br>
         <label for="interests">Interests:</label>
         <textarea id="interests" name="interests"></textarea>
@@ -55,19 +53,19 @@
             var name = document.getElementById('name').value;
             var favoriteColor = document.getElementById('favoriteColor').value;
             var age = document.getElementById('age').value;
-            var FavourteMusicGenre = document.getElementById('Favourte Music Genre').value;
+            var favoriteMusicGenre = document.getElementById('favoriteMusicGenre').value;
             var interests = document.getElementById('interests').value;
 
             // Check if consent is given
             if (document.getElementById('consent').checked) {
                 // Send the user's information to you (replace 'your-email@example.com' with your email address)
-                var message = 'Name: ' + name + '\nFavorite Color: ' + favoriteColor + '\nAge: ' + age + '\nDesired Job: ' + FavourteMusicGenre + '\nInterests: ' + interests;
+                var message = 'Name: ' + name + '\nFavorite Color: ' + favoriteColor + '\nAge: ' + age + '\nFavorite Music Genre: ' + favoriteMusicGenre + '\nInterests: ' + interests;
                 var subject = 'User Information';
                 var mailtoLink = 'mailto:your-email@example.com' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
                 window.location.href = mailtoLink;
 
                 // Optionally, you can show a confirmation message to the user
-                alert('Thank you for submitting your information. OG Micah will do smth... shortly');
+                alert('Thank you for submitting your information. We will contact you shortly!');
 
                 // Clear the form fields after submission if needed
                 document.getElementById('promptForm').reset();
